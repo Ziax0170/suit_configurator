@@ -1,0 +1,70 @@
+main {
+  display: grid;
+  grid-template-columns: auto 370px;
+}
+
+.valgt {
+  stroke-dasharray: 5;
+  stroke: black;
+  /*stroke-dashoffset: 1000;*/
+  animation: dash 30s linear alternate infinite;
+}
+
+@keyframes dash {
+  /*from {
+    stroke-dashoffset: 822;
+  }*/
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+#wrapper {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.left,
+.right {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+}
+
+.buttons {
+  height: 10%;
+  width: 20%;
+  background-color: lightblue;
+}
+
+#colors {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  padding: 10px;
+  border: 10px solid rgb(201, 201, 201);
+  background: rgb(201, 201, 201);
+  border-radius: 20px;
+}
+#myColors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 10px;
+  height: 0;
+  justify-items: center;
+}
+
+.color {
+  height: 60px;
+  width: 60px;
+  border: 1.5px solid black;
+  cursor: pointer;
+}
+
+#usersPick {
+  width: auto;
+  border: none;
+  cursor: none;
+  height: auto;
+  margin: auto;
+}

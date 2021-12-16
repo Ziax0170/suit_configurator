@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Quicksand:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Montserrat:wght@300;400&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    <title>Suit Configurator</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="nav-text" href="index.html">Logo</a>
+        <a class="nav-text" href="#configurator">Design your suit</a>
+        <a class="nav-text" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="splashMain">
+        <div>
+          <h1 class="splash-text">FINE GENTLEMEN</h1>
+        </div>
+      </section>
+
+      <h2 class="xl-text">SUIT CONFIGURATOR</h2>
+      <p>Please select the feature that you would like to modify!</p>
+      <!-- <button onclick="togglePockets()">Show Pockets</button>
+      <button onclick="toggleButton()">Show Button</button>
+      <button onclick="toggleLapel()">Show Lapel</button>
+      <button onclick="togglePocketsquare()">Show Pocketsquare</button>
+      <button onclick="toggleTie()">Show Tie</button>
+      <button onclick="toggleBowtie()">Show Bowtie</button> -->
+      <section id="configurator">
+        <div id="product-preview">
+          <!-- SVG and images inserted here -->
+        </div>
+
+        <div id="menu">
+          <ul id="attribute-panel">
+            <!-- <li class="attribute" data-feature="fabric">
+              <div class="attribute-header">
+                <img class="attribute-img" src="images/fabricsIcon.png" alt="Fabrics Icon" />
+                <h4 class="menu-text">Fabric</h4>
+              </div>
+            </li> -->
+
+            <li class="attribute" data-feature="jacket">
+              <div class="attribute-header">
+                <img class="attribute-img" src="images/suitIcon.png" alt="Suit Icon" />
+                <h4 class="menu-text">Jacket</h4>
+              </div>
+            </li>
+
+            <li class="attribute" data-feature="lapel">
+              <div class="attribute-header">
+                <img class="attribute-img" src="images/LapelIcon.png" alt="Lapel Icon" />
+                <h4 class="menu-text">Lapel</h4>
+              </div>
+            </li>
+
+            <li class="attribute" data-feature="tie">
+              <div class="attribute-header">
+                <img class="attribute-img" src="images/tieIcon.png" alt="" />
+                <h4 class="menu-text">Tie</h4>
+              </div>
+            </li>
+
+            <li class="attribute" data-feature="bowtie">
+              <div class="attribute-header">
+                <img class="attribute-img" src="images/bowtieIcon.png" alt="" />
+                <h4 class="menu-text">Bowtie</h4>
+              </div>
+            </li>
+
+            <li class="attribute" data-feature="pocketsquare">
+              <div class="attribute-header">
+                <img class="attribute-img" src="images/handkerchiefIcon.png" alt="" />
+                <h4 class="menu-text">Pocket square</h4>
+              </div>
+            </li>
+
+            <li class="attribute" data-feature="pockets">
+              <div class="attribute-header">
+                <img class="attribute-img" src="images/pocketIcon.png" alt="Pocket Icon" />
+                <h4 class="menu-text">Pockets</h4>
+              </div>
+            </li>
+
+            <li class="attribute" data-feature="buttons">
+              <div class="attribute-header">
+                <img class="attribute-img" src="images/buttonIcon.png" alt="" />
+                <h4 class="menu-text">Buttons</h4>
+              </div>
+            </li>
+
+            <li class="attribute" data-feature="pants">
+              <div class="attribute-header">
+                <img class="attribute-img" src="images/pantsIcon.png" alt="" />
+                <h4 class="menu-text">Pants</h4>
+              </div>
+            </li>
+          </ul>
+
+          <div id="flyout-menu">
+            <!-- <div class="flyout-panel flyout-panel-display" data-feature="fabric">
+              <div class="flyout-header"><h3 class="menu-header-text">Fabric</h3></div>
+              <div class="flyout-content">
+                <input type="radio" id="fabric-false" name="radio-fabric" value="fabric-plain" checked />
+                <label for="fabric-false">Plain</label><br />
+                <input type="radio" id="fabric-true" name="radio-fabric" value="fabric-checkered" />
+                <label for="fabric-true">Checkered</label>
+              </div>
+            </div> -->
+
+            <div class="flyout-panel" data-feature="jacket">
+              <div class="flyout-header"><h3 class="menu-header-text">Jacket</h3></div>
+              <div class="flyout-content">
+                <div class="color-swatches">
+                  <div class="color black"></div>
+                  <div class="color darkblue color-active"></div>
+                  <div class="color lightblue"></div>
+                  <div class="color mint"></div>
+                  <div class="color green"></div>
+                  <div class="color white"></div>
+                  <div class="color pink"></div>
+                  <div class="color purple"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flyout-panel" data-feature="lapel">
+              <div class="flyout-header"><h3 class="menu-header-text">Lapel</h3></div>
+              <div class="flyout-content">
+                <input type="radio" id="lapel-false" name="radio-lapel" value="lapel-standard" checked />
+                <label for="lapel-false">Standard</label><br />
+                <input type="radio" id="lapel-true" name="radio-lapel" value="lapel-wide" />
+                <label for="lapel-true">Wide</label>
+              </div>
+            </div>
+
+            <div class="flyout-panel" data-feature="tie">
+              <div class="flyout-header"><h3 class="menu-header-text">Tie</h3></div>
+              <div class="flyout-content">
+                <input type="radio" id="tie-false" name="radio-tie" value="tie-false" />
+                <label for="tie-false">No thanks</label><br />
+                <input type="radio" id="tie-true" name="radio-tie" value="tie-true" checked />
+                <label for="tie-true">Yes please</label>
+
+                <div class="color-swatches">
+                  <div class="color black color-active"></div>
+                  <div class="color darkblue"></div>
+                  <div class="color lightblue"></div>
+                  <div class="color mint"></div>
+                  <div class="color green"></div>
+                  <div class="color white"></div>
+                  <div class="color pink"></div>
+                  <div class="color purple"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flyout-panel" data-feature="bowtie">
+              <div class="flyout-header"><h3 class="menu-header-text">Bowtie</h3></div>
+              <div class="flyout-content">
+                <input type="radio" id="bowtie-false" name="radio-bowtie" value="bowtie-false" checked />
+                <label for="bowtie-false">No thanks</label><br />
+                <input type="radio" id="bowtie-true" name="radio-bowtie" value="bowtie-true" />
+                <label for="bowtie-true">Yes please</label>
+
+                <div class="color-swatches">
+                  <div class="color black color-active"></div>
+                  <div class="color darkblue"></div>
+                  <div class="color lightblue"></div>
+                  <div class="color mint"></div>
+                  <div class="color green"></div>
+                  <div class="color white"></div>
+                  <div class="color pink"></div>
+                  <div class="color purple"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flyout-panel" data-feature="pocketsquare">
+              <div class="flyout-header"><h3 class="menu-header-text">Pocket square</h3></div>
+              <div class="flyout-content">
+                <input type="radio" id="pocketsquare-false" name="radio-pocketsquare" value="pocketsquare-false" />
+                <label for="pocketsquare-false">No thanks</label><br />
+                <input type="radio" id="pocketsquare-true" name="radio-pocketsquare" value="pocketsquare-true" checked />
+                <label for="pocketsquare-true">Yes please</label>
+
+                <div class="color-swatches">
+                  <div class="color black"></div>
+                  <div class="color darkblue"></div>
+                  <div class="color lightblue"></div>
+                  <div class="color mint"></div>
+                  <div class="color green"></div>
+                  <div class="color white color-active"></div>
+                  <div class="color pink"></div>
+                  <div class="color purple"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flyout-panel" data-feature="pockets">
+              <div class="flyout-header"><h3 class="menu-header-text">Pocket Flaps</h3></div>
+              <div class="flyout-content">
+                <input type="radio" id="pockets-false" name="radio-pockets" value="pockets-false" />
+                <label for="pockets-false">No thanks</label><br />
+                <input type="radio" id="pockets-true" name="radio-pockets" value="pockets-true" checked />
+                <label for="pockets-true">Yes please</label>
+              </div>
+            </div>
+
+            <div class="flyout-panel" data-feature="buttons">
+              <div class="flyout-header"><h3 class="menu-header-text">Buttons</h3></div>
+              <div class="flyout-content">
+                <input type="radio" id="buttons-false" name="radio-buttons" value="pockets-false" />
+                <label for="buttons-false">1 button</label><br />
+                <input type="radio" id="buttons-true" name="radio-buttons" value="buttons-true" checked />
+                <label for="buttons-true">2 buttons</label>
+              </div>
+            </div>
+
+            <div class="flyout-panel" data-feature="pants">
+              <div class="flyout-header"><h3 class="menu-header-text">Pants</h3></div>
+              <div class="flyout-content">
+                <div class="color-swatches">
+                  <div class="color black"></div>
+                  <div class="color darkblue color-active"></div>
+                  <div class="color lightblue"></div>
+                  <div class="color mint"></div>
+                  <div class="color green"></div>
+                  <div class="color white"></div>
+                  <div class="color pink"></div>
+                  <div class="color purple"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="nav-text">Fine Gentlemen - October 2021</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
